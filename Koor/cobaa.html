@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Title>Home</Title>
+    <link rel="stylesheet" type="text/css" href='/css/style.css'>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <img class="logo" src='/logo/logo_itenas_black.png'>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><button class="Login" data-toggle="modal" id="login">LOGIN</button></li>
+                <li><a href="#"><strong>HOME</strong></li>
+                <li><a href="/registrasi"><strong>REGISTRASI</strong></a></li>
+            </ul>
+        </div>
+        <div class="nav-right-side">
+            <span href="javascript:void(0)" onclick="openNav()">&#9776;</span>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="login" id="login_side"><strong>LOGIN</strong></a>
+        <a href="/registrasi"><strong>REGISTRASI</strong></a>
+    </div>
+
+    <div class="content">
+        <div class="container kiri">
+            <div class="text-kiri">
+                <div class="judul"><p>MEDIA PAMERAN HARI KEWIRAUSAHAAN MAHASISWA ITENAS BANDUNG</p></div>
+                <br>
+                <p>
+                    <span>M</span>edia untuk memamerkan atau mempromosikan ide bisnis yang digagas mahasiswa Itenas Bandung yang mengikuti kuliah kewirausahaan.Ide bisnis tersebut disusun dalam bentuk proposal rencana bisnis dan dipamerkan di media ini dalam bentuk poster ide bisnis serta poster Business Model Canvas.
+                </p>
+                <br>
+                <p>
+                    <span>S</span>elain memamerkan ide bisnisnya, melalui media ini mahasiswa juga bisa melihat ide bisnis yang digagas kelompok lain, memberikan saran/masukan bagi ide bisnis mahasiswa lain, serta melakukan benchmarking untuk ide bisnis yang sejenis
+                </p>
+            </div>
+        </div>
+        <div class="container kanan">
+            <div class="pict-kanan">
+                <img src="/logo/picture_1.jpg"  style="width:100%">
+            </div>
+                 
+            </div>
+            <br>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <form class="modal-content" method="POST" action="{{ route('login.action') }}">
+            @csrf
+            <span class="close">&times;</span>
+            <div class="modal-menu">
+                <span class="material-icons md-36 person">person</span>
+                <p>SELAMAT DATANG</p>
+                <div class="log-us">
+                    <span class="material-icons">person</span>
+                    <input type="text" placeholder="Masukkan username" name="username" required>
+                </div>
+                <div class="log-us">
+                    <span class="material-icons">lock</span>
+                    <input type="password" placeholder="Masukkan Password" name="password" required>
+                </div>
+                <button class="btn-login" type="submit" name="login">LOGIN</button>
+                
+    </div>
+    </form>
+    </div>
+   <!-- <div class="footer">
+        <h2 id="ABOUT">ABOUT US</h2>
+        <div class="foot-con">
+            <p>Sumber Informasi Akademik</p>
+            <span class="line-top"></span>
+            <ul class="footer-con">
+                <li>Carrier Development Center</li>
+                <li>Kalender Akademik Sarjana</li>
+                <li>Kalender Akademik Magister</li>
+                <li>SISFO SKK</li>
+                <li>Kemahasiswaan ITENAS</li>
+            </ul>
+        </div>
+        <div class="foot-con">
+            <p>Sumber Informasi Institute</p>
+            <span class="line-top"></span>
+            <ul class="footer-con">
+                <li>UPT Perpustakaan</li>
+                <li>UPT Teknologi Informasi</li>
+                <li>Biro Akademik</li>
+                <li>Biro Keuangan</li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="foot-con">
+            <p>Link</p>
+            <span class="line-top"></span>
+            <ul class="footer-con">
+                <li>ITENAS e-Magazine</li>
+                <li>Jurnal Online</li>
+                <li>Repository</li>
+                <li>e-book</li>
+                <li>Download</li>
+            </ul>
+        </div>
+        <div class="foot-con">
+            <p>Follow Kami</p>
+            <span class="line-top"></span>
+            <ul class="footer-con social-media">
+                <li>
+                    <ion-icon class="logo-sos" name="logo-twitter"></ion-icon>
+                    <ion-icon class="logo-sos" name="logo-facebook"></ion-icon>
+                    <ion-icon class="logo-sos" name="logo-instagram"></ion-icon>
+                </li>
+            </ul>
+        </div>
+    </div>
+    -->
+    <script>
+       /* var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }*/
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("login");
+        var btn_side = document.getElementById("login_side");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        btn_side.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "150px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

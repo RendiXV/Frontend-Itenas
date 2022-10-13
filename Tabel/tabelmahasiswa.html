@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Title>menu</Title>
+    <link rel="stylesheet" type="text/css" href="../style/menustyle.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:light' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- tailwindscss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="flex items-center bg-orange-500 flex-wrap h-14 z-30">
+        <div class="flex-none w-auto sm:pr-32 sm:pl-4">
+            <span>
+                <ion-icon class="text-4xl " name="menu"></ion-icon>
+            </span>
+        </div>
+        <div class="grow justify-center flex">
+            <a href=""><img class="img-responsive w-32 mx-4 visible " src="image/logo_itenas.png" alt=""></a>
+        </div>
+        <div class="flex-none w-auto">
+            <div class="ml-auto">
+                <button type="button" class="show-notif px-3">
+                    <div
+                        class="absolute inline-block -translate-x-2/4 -translate-y-1/4 rotate-0 skew-x-0 skew-y-0 p-2.5 text-sm bg-red-700 rounded-full z-10">
+                    </div>
+                    <ion-icon class="text-4xl hover:text-slate-100 transition-all" name="notifications-outline">
+                    </ion-icon>
+                </button>
+                <a href="Profil.html" class="px-3 hover:text-slate-100 transition-all">
+                    <span>
+                        <ion-icon class="text-4xl " name="person-circle-outline"></ion-icon>
+                    </span>
+                </a>
+                <a href="" class="px-3 pr-4 hover:text-slate-100 transition-all">
+                    <span>
+                        <ion-icon class="text-4xl " name="exit-outline"></ion-icon>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal flex items-center hidden ">
+        <!-- modal -->
+        <span>
+            <ion-icon class="text-4xl text-gray-900 fixed" name="navigate" style="right: 180px; top: 39px;"></ion-icon>
+        </span>
+        <div class="bg-white rounded shadow-lg fixed top-12 right-10 inline-block   " style="width: 400px;">
+            <!-- modal header -->
+            <div class="px-4 py-2 flex justify-between items-center">
+                <h3 class="font-semibold text-lg">Notification</h3>
+                <button class="text-black close-modal hover:scale-125 transition-all">&cross;</button>
+            </div> 
+        </div>
+    </div>
+
+    <!-- search -->
+    <div class="w-full bg-white z-10">
+        <form action="" class="relative mx-auto w-max py-4">
+            <input type="search"
+                class="transition-all duration-500 mx-1 peer cursor-pointer relative z-10 h-12 w-18 rounded-full border-2 border-gray-300 bg-transparent pl-12 outline-none focus:w-72 focus:cursor-text focus:border-lime-300 focus:pl-14 focus:pr-4 "
+                placeholder="search" />
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="absolute inset-y-0 my-auto h-8 w-12 border-r  stroke-gray-500 px-3.5 peer-focus:border-lime-300  peer-focus:stroke-lime-500 "
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </form>
+    </div>
+
+
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="py-3 px-6">
+                    Product name
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Color
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Category
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Price
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="py-4 px-6">
+                    Sliver
+                </td>
+                <td class="py-4 px-6">
+                    Laptop
+                </td>
+                <td class="py-4 px-6">
+                    $2999
+                </td>
+                <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+
+    <script>
+        const modal = document.querySelector('.modal');
+        const modalpost = document.querySelector('.modal-post');
+        const shownotif = document.querySelector('.show-notif');
+        const showpost = document.querySelector('.show-post');
+        const closeModal = document.querySelectorAll('.close-modal');
+        const closePost = document.querySelectorAll('.close-post');
+
+        // modalnotif
+        shownotif.addEventListener('click', function () {
+            modal.classList.remove('hidden')
+        });
+        closeModal.forEach(closemodal => {
+            closemodal.addEventListener('click', function () {
+                modal.classList.add('hidden')
+            });
+        });
+
+        // modalpost
+        showpost.addEventListener('click', function () {
+            modalpost.classList.remove('hidden')
+        });
+        closePost.forEach(closepost => {
+            closepost.addEventListener('click', function () {
+                modalpost.classList.add('hidden')
+            });
+        });
+
+        const modalpost1 = document.querySelector('.modal-post');
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                modalpost1.classList.remove('items-center')
+            } else {
+                modalpost1.classList.add('items-center')
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 1023px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+    </script>
+</body>
+
+</html>
